@@ -1,0 +1,8 @@
+#! /bin/bash
+# This script will back up the directory listed in the SOURCE_DIR file
+# to the remote location listed in the DEST file
+
+SOURCE=`cat SOURCE_DIR`
+DEST=`cat DEST`
+
+rsync --progress --partial -avz $SOURCE $DEST
